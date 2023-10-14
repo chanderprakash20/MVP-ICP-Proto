@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "tracker_backend": {
+      "main": "src/tracker_backend/main.mo",
+      "type": "motoko"
+    },
+    "tracker_frontend": {
+      "dependencies": [
+        "tracker_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/tracker_frontend/src/index.html"
+      },
+      "source": [
+        "src/tracker_frontend/assets",
+        "dist/tracker_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
